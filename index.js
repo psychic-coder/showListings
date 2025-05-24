@@ -69,7 +69,7 @@ app.post('/api/listings/:id/unshortlist', async (req, res) => {
 });
 
 
-// 🔵 Get only shortlisted listings
+
 app.get('/api/shortlisted', async (req, res) => {
   try {
     const { rows } = await pool.query('SELECT * FROM listing WHERE is_shortlisted = true');

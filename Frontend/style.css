@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.header {
+    background: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    /* background: linear-gradient(135deg, #d4af37, #8b6914); */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-tabs {
+    background: white;
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #eee;
+    overflow-x: auto;
+}
+
+.nav-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    min-width: 60px;
+}
+
+.nav-tab:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-tab.active {
+    /* background-color: #e3f2fd; */
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    /* SVG icons will be added later */
+}
+
+.nav-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.listings-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.listing-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.listing-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.listing-card.epic-designs {
+    border-color: #4CAF50;
+}
+
+.listing-card.studio-d3 {
+    border-color: #9C27B0;
+}
+
+.listing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 15px;
+    
+}
+
+.star {
+    color: black;
+    font-size: 16px;
+    
+}
+
+.star.empty {
+    color: #ddd;
+}
+
+.description {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.phone {
+    color: #333;
+    font-weight: 500;
+}
+
+.listing-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 80px;
+    border-left:1px solid #d0d0d0 ;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.action-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.action-label {
+    font-size: 12px;
+    color: #666;
+  
+}
+
+.shortlist-btn.active {
+    color: #e91e63;
+}
+
+.hide-btn {
+    color: #ff5722;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.error {
+    text-align: center;
+    padding: 40px;
+    color: #f44336;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 15px;
+    }
+
+    .nav-tabs {
+        padding: 8px 15px;
+        gap: 15px;
+    }
+
+    .listings-container {
+        padding: 15px;
+    }
+
+    .listing-card {
+        padding: 15px;
+    }
+
+    .company-name {
+        font-size: 20px;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .listing-header {
+        gap: 15px;
+    }
+
+    .actions {
+        min-width: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats {
+        gap: 15px;
+    }
+
+    .stat-number {
+        font-size: 20px;
+    }
+
+    .nav-tabs {
+        gap: 10px;
+    }
+
+    .nav-tab {
+        min-width: 50px;
+        padding: 8px;
+    }
+}
